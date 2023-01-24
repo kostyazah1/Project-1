@@ -1,0 +1,1269 @@
+﻿<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" class="">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        AjaxContainer: 'div.dmBody',
+        WrappingContainer: 'div.dmOuter',
+        HomeUrl: 'https://www.heenabeauty.co.uk/',
+        AccountUUID: 'e49be9d8fdca493cb558123698298376',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: '09d02fe2',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Mon Jun 26 14:54:16 UTC 2017',
+        ExternalUid: '0E0B0B5959D8AC79E10000000A010256',
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialDynamicItem: '',
+        InitialPageAlias: 'hair-and-beauty-treatments',
+        InitialPageUuid: '61118eefdf1c4a9f911df4d5b9bdbbfb',
+        InitialEncodedPageAlias: 'aGFpci1hbmQtYmVhdXR5LXRyZWF0bWVudHM=',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: false,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '208',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        NotificationSubDomain: 'heenabeauty2',
+        HasCustomDomain: true,
+        showCookieNotification: true,
+        cookiesNotificationMarkup: ' <div>We use cookies to ensure that we give you the best experience on our website. If you would like to change your preferences you may do so by following the instructions <a href=\"http:\/\/www.aboutcookies.org\/Default.aspx?page=1\" target=\"_blank\">here<\/a>.<\/div> \n',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'NA',
+        currentLanguage: 'null',
+        currentLocale: 'null',
+        NavItems: '{}',
+        errors: {
+            general: 'Fehler beim Herstellen der Verbindung zur Webseite.<br/> Stellen Sie sicher, dass Sie online sind.',
+            password: 'Benutzername oder Passwort falsch',
+            tryAgain: 'Erneut versuchen'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: 4,
+            NavbarLiveHomePage: 'https://www.heenabeauty.co.uk/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: false,
+        planID: '206',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        
+
+        siteInfo: null,
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
+
+<link rel="canonical" href="hair-and-beauty-treatments.html">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--Add favorites icons-->
+
+<link rel="icon" type="image/x-icon" href="09d02fe2/site_favicon_16_1497636806864.ico">
+
+<!-- End favorite icons -->
+
+<link rel="preconnect" href="https://lirp.cdn-website.com/" crossorigin="">
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if(!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function() {
+            },
+            getCurrentDeviceType: function() {
+                return window._currentDevice;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+<!-- loadCSS function -->
+<script>
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+
+  function checkCss() {
+    if (cssLinks && cssLinks.runtime && cssLinks.global) {
+      loadCssLink(cssLinks.runtime);
+      loadCssLink(cssLinks.global);
+      cssLinks = null;
+    }
+  }
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      /* Never fail - this is just a tool for measurements */
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def(){this.promise=new Promise((function(a,b){this.resolve=a,this.reject=b}).bind(this))}
+    const defs={};
+    window.getDeferred=function(a){return null==defs[a]&&(defs[a]=new Def),defs[a]}
+    window.waitForDeferred = function (b, a, c) {
+      let d = window?.getDeferred?.(b);
+      d
+        ? d.promise.then(a)
+        : c && ["complete", "interactive"].includes(document.readyState)
+        ? setTimeout(a, 1)
+        : c
+        ? document.addEventListener("DOMContentLoaded", a)
+        : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}
+</style>
+<style id="cssVariables" type="text/css">
+    
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- loadCSS function -->
+<script>
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+
+  function checkCss() {
+    if (cssLinks && cssLinks.runtime && cssLinks.global) {
+      loadCssLink(cssLinks.runtime);
+      loadCssLink(cssLinks.global);
+      cssLinks = null;
+    }
+  }
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      /* Never fail - this is just a tool for measurements */
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+<link type="text/css" rel="stylesheet" href="_dm/s/rt/css/font-css/googlefonts.css">
+
+
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-new-->
+<link rel="stylesheet" type="text/css" href="mnlt/production/3152/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-new.min.css">
+
+<!-- End of RT CSS Include -->
+
+
+
+    
+       <link type="text/css" rel="stylesheet" href="WIDGET_CSS/production_3152/24af599f40a224aac742f5e28f98d7d8.css" id="widgetCSS">
+    
+
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {height: auto;}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+    body[data-page-alias="hair-and-beauty-treatments"] #dm [data-show-on-page-only="hair-and-beauty-treatments"]{
+        display: block !important;
+    }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link type="text/css" rel="stylesheet" href="09d02fe2/files/09d02fe2_1.min.css?v=12" id="siteGlobalCss">
+
+
+<!-- additional css file per platform -->
+<link type="text/css" rel="stylesheet" href="_dm/s/rt/css/yell/yell-runtime-1.css?version=2023-01-18T13_52_12">
+
+
+<style id="customWidgetStyle" type="text/css">
+    
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+<style id="additionalGlobalCss" type="text/css">
+</style>
+
+<style id="pagestyle" type="text/css">
+    *#dm *.dmBody div.u_1396380103{background-color:rgb(51, 51, 51) !important;}
+*#dm *.dmBody div.u_1924302395 input:not([type='submit']){background-color:rgb(255, 255, 255) !important;border-style:solid !important;border-color:rgb(51, 51, 51) !important;color:rgb(51, 51, 51) !important;}
+*#dm *.dmBody div.u_1924302395 textarea{background-color:rgb(255, 255, 255) !important;border-style:solid !important;border-color:rgb(51, 51, 51) !important;color:rgb(51, 51, 51) !important;}
+*#dm *.dmBody div.u_1924302395 select{background-color:rgb(255, 255, 255) !important;border-style:solid !important;border-color:rgb(51, 51, 51) !important;color:rgb(51, 51, 51) !important;}
+*#dm *.dmBody div.u_1924302395 label{color:rgb(247, 247, 247) !important;}
+*#dm *.dmBody div.u_1924302395 input[type="submit"]{color:rgb(247, 247, 247) !important;}
+*#dm *.dmBody div.u_1924302395 span{color:rgb(247, 247, 247) !important;}
+*#dm *.dmBody div.u_1419892897{background-color:rgb(102, 102, 102) !important;}
+*#dm *.dmBody div.u_1414067917{width:33px !important;max-width:100% !important;display:block !important;}
+*#dm *.dmBody div.u_1378748015{width:261px !important;max-width:100% !important;display:block !important;}
+*#dm *.dmBody a.u_1518654939 span.icon{color:#f7f7f7 !important;background-image:none !important;}
+*#dm *.dmBody a.u_1518654939{border-radius:4px !important;-moz-border-radius:4px !important;-webkit-border-radius:4px !important;}
+*#dm *.dmBody div.u_1340759176{background-color:rgba(0, 0, 0, 0) !important;background-image:url(09d02fe2/dms3rep/multi/opt/image_placeholder-530x286-2880w.png) !important;background-repeat:no-repeat !important;background-size:cover !important;background-position:center center !important;}
+*#dm *.dmBody div.u_1808306203{background-color:rgba(0, 0, 0, 0) !important;background-image:url(09d02fe2/dms3rep/multi/opt/image_placeholder-530x286-2880w.png) !important;background-repeat:no-repeat !important;background-size:cover !important;background-position:center center !important;}
+*#dm *.dmBody div.u_1306080814{width:530px !important;max-width:100% !important;display:block !important;}
+*#dm *.dmBody div.u_1444573868{width:530px !important;max-width:100% !important;display:block !important;}
+*#dm *.dmBody div.u_1444573868 img{border-radius:50% !important;-moz-border-radius:50% !important;-webkit-border-radius:50% !important;}
+*#dm *.dmBody div.u_1629883029{width:530px !important;max-width:100% !important;display:block !important;}
+*#dm *.dmBody a.u_1558875637 span.icon{color:#f7f7f7 !important;background-image:none !important;}
+*#dm *.dmBody div.u_1015569373{width:64px !important;max-width:100% !important;display:block !important;}
+*#dm *.dmBody div.u_1877554731{width:64px !important;max-width:100% !important;display:block !important;}
+*#dm *.dmBody a.u_1558875637{border-radius:4px !important;-moz-border-radius:4px !important;-webkit-border-radius:4px !important;}
+*#dm *.dmBody div.u_1759509580{width:530px !important;max-width:100% !important;display:block !important;}
+*#dm *.dmBody div.u_1330175492 img{border-radius:0% !important;-moz-border-radius:0% !important;-webkit-border-radius:0% !important;}
+*#dm *.dmBody div.u_1306080814 img{border-radius:0% !important;-moz-border-radius:0% !important;-webkit-border-radius:0% !important;}
+*#dm *.dmBody div.u_1330175492{width:530px !important;max-width:100% !important;display:block !important;}
+*#dm *.dmBody div.u_1117958961 img{border-radius:0% !important;-moz-border-radius:0% !important;-webkit-border-radius:0% !important;}
+*#dm *.dmBody div.u_1117958961{width:530px !important;max-width:100% !important;display:block !important;}
+*#dm *.dmBody div.u_1551416931{width:530px !important;max-width:100% !important;display:block !important;}
+*#dm *.dmBody div.u_1268483053{background-color:rgba(0, 0, 0, 0) !important;background-image:none !important;background-repeat:no-repeat !important;background-size:cover !important;background-position:center center !important;}
+*#dm *.dmBody div.u_1044096577 input:not([type='submit']){background-color:rgb(255, 255, 255) !important;border-style:solid !important;border-color:rgb(51, 51, 51) !important;color:rgb(51, 51, 51) !important;}
+*#dm *.dmBody div.u_1044096577 textarea{background-color:rgb(255, 255, 255) !important;border-style:solid !important;border-color:rgb(51, 51, 51) !important;color:rgb(51, 51, 51) !important;}
+*#dm *.dmBody div.u_1044096577 select{background-color:rgb(255, 255, 255) !important;border-style:solid !important;border-color:rgb(51, 51, 51) !important;color:rgb(51, 51, 51) !important;}
+*#dm *.dmBody div.u_1044096577 label{color:rgb(17, 17, 17) !important;}
+*#dm *.dmBody div.u_1044096577 span{color:rgb(17, 17, 17) !important;}
+*#dm *.dmBody div.u_1044096577 input[type="submit"]{color:rgb(255, 255, 255) !important;}
+*#dm *.dmBody div.u_1492378427 input:not([type='submit']){background-color:rgb(255, 255, 255) !important;border-style:solid !important;border-color:rgb(51, 51, 51) !important;color:rgb(51, 51, 51) !important;}
+*#dm *.dmBody div.u_1492378427 label{color:rgb(247, 247, 247) !important;}
+*#dm *.dmBody div.u_1492378427 span{color:rgb(247, 247, 247) !important;}
+*#dm *.dmBody div.u_1492378427 input:not([type="submit"]){border-style:solid !important;border-width:0px !important;}
+*#dm *.dmBody div.u_1492378427 textarea{background-color:rgb(255, 255, 255) !important;border-style:solid !important;border-color:rgb(51, 51, 51) !important;color:rgb(51, 51, 51) !important;border-width:0px !important;}
+*#dm *.dmBody div.u_1492378427 select{background-color:rgb(255, 255, 255) !important;border-style:solid !important;border-color:rgb(51, 51, 51) !important;color:rgb(51, 51, 51) !important;border-width:0px !important;}
+*#dm *.dmBody div.u_1492378427 *.dmforminput input{color:rgba(0, 0, 0, 1) !important;}
+*#dm *.dmBody div.u_1492378427 *.dmformsubmit:hover{background-color:rgba(196, 206, 209, 1) !important;}
+*#dm *.dmBody div.u_1492378427 *.dmformsubmit.hover{background-color:rgba(196, 206, 209, 1) !important;}
+*#dm *.dmBody div.u_1492378427 *.dmformsubmit{background-color:rgba(196, 206, 209, 1) !important;border-style:solid !important;border-width:0px !important;border-radius:0px !important;-moz-border-radius:0px !important;-webkit-border-radius:0px !important;}
+*#dm *.dmBody div.u_1492378427 input[type="submit"]{color:rgba(0, 0, 0, 1) !important;}
+*#dm *.dmBody div.u_1492378427 *.dmwidget-title{font-family:'Lobster Two' !important;color:rgba(255, 255, 255, 1) !important;}
+*#dm *.dmBody div.u_1899548275{line-height:200% !important;}
+*#dm *.dmBody div.u_1050939570{background-color:rgb(51, 51, 51) !important;background-repeat:no-repeat !important;background-image:url('09d02fe2/dms3rep/multi/opt/Cta1-2880w.jpg') !important;background-size:cover !important;}
+*#dm *.dmBody hr.u_1840422254{background-color:rgb(255, 255, 255) !important;}
+*#dm *.dmBody div.u_1492378427 *.dmformsubmit:hover input[type="submit"]{color:rgba(0, 0, 0, 1) !important;}
+*#dm *.dmBody div.u_1492378427 *.dmformsubmit.hover input[type="submit"]{color:rgba(0, 0, 0, 1) !important;}
+*#dm *.dmBody div.u_1522465388{background-color:rgba(0, 0, 0, 0) !important;}
+*#dm *.dmBody div.u_1758426993{background-repeat:no-repeat !important;background-image:url('09d02fe2/dms3rep/multi/opt/Bg-2880w.jpg') !important;background-size:cover !important;}
+*#dm *.dmBody a.u_1985996269:hover{background-color:rgba(255, 255, 255, 1) !important;}
+*#dm *.dmBody a.u_1985996269.hover{background-color:rgba(255, 255, 255, 1) !important;}
+*#dm *.dmBody a.u_1985996269:hover span.text{color:rgba(0, 0, 0, 1) !important;}
+*#dm *.dmBody a.u_1985996269.hover span.text{color:rgba(0, 0, 0, 1) !important;}
+*#dm *.dmBody div.u_1521074534{line-height:200% !important;}
+*#dm *.dmBody div.u_1895233626{background-repeat:no-repeat !important;background-image:url('09d02fe2/dms3rep/multi/opt/Hair_hero-2880w.jpg') !important;background-size:cover !important;}
+*#dm *.dmBody div.u_1141467159{background-color:rgba(255, 255, 255, 0.85) !important;}
+*#dm *.dmBody a.u_1601774988{border-radius:0px !important;-moz-border-radius:0px !important;-webkit-border-radius:0px !important;}
+*#dm *.dmBody a.u_1601774988 span.icon{color:rgba(0, 0, 0, 1) !important;fill:rgba(0, 0, 0, 1) !important;}
+
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    *#dm *.dmBody div.u_1340759176{background-color:rgba(0, 0, 0, 0) !important;background-image:url(09d02fe2/dms3rep/multi/opt/image_placeholder-530x286-2880w.png) !important;background-repeat:no-repeat !important;background-size:cover !important;background-position:center center !important;}
+*#dm *.dmBody div.u_1808306203{background-color:rgba(0, 0, 0, 0) !important;background-image:url(09d02fe2/dms3rep/multi/opt/image_placeholder-530x286-2880w.png) !important;background-repeat:no-repeat !important;background-size:cover !important;background-position:center center !important;}
+*#dm *.dmBody div.u_1050939570{background-color:rgb(51, 51, 51) !important;background-repeat:no-repeat !important;background-image:url('09d02fe2/dms3rep/multi/opt/Cta1-2880w.jpg') !important;background-size:cover !important;}
+*#dm *.dmBody div.u_1758426993{background-repeat:no-repeat !important;background-image:url('09d02fe2/dms3rep/multi/opt/Bg-2880w.jpg') !important;background-size:cover !important;}
+*#dm *.dmBody div.u_1895233626{background-repeat:no-repeat !important;background-image:url('09d02fe2/dms3rep/multi/opt/Hair_hero-2880w.jpg') !important;background-size:cover !important;}
+@media all and (min-width:1920px), all and (-webkit-min-device-pixel-ratio: 1.5), all and (min--moz-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min-device-pixel-ratio: 1.5) {*#dm *.dmBody div.u_1340759176{background-color:rgba(0, 0, 0, 0) !important;background-image:url(09d02fe2/dms3rep/multi/opt/image_placeholder-530x286-2880w.png) !important;background-repeat:no-repeat !important;background-size:cover !important;background-position:center center !important;}
+*#dm *.dmBody div.u_1808306203{background-color:rgba(0, 0, 0, 0) !important;background-image:url(09d02fe2/dms3rep/multi/opt/image_placeholder-530x286-2880w.png) !important;background-repeat:no-repeat !important;background-size:cover !important;background-position:center center !important;}
+*#dm *.dmBody div.u_1050939570{background-color:rgb(51, 51, 51) !important;background-repeat:no-repeat !important;background-image:url('09d02fe2/dms3rep/multi/opt/Cta1-2880w.jpg') !important;background-size:cover !important;}
+*#dm *.dmBody div.u_1758426993{background-repeat:no-repeat !important;background-image:url('09d02fe2/dms3rep/multi/opt/Bg-2880w.jpg') !important;background-size:cover !important;}
+*#dm *.dmBody div.u_1895233626{background-repeat:no-repeat !important;background-image:url('09d02fe2/dms3rep/multi/opt/Hair_hero-2880w.jpg') !important;background-size:cover !important;}
+}
+*#dm *.dmBody a.u_1894379052{padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:100% !important;left:0 !important;width:280px !important;margin-top:10px !important;position:relative !important;margin-bottom:10px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:47px !important;}
+*#dm *.dmBody div.u_1808306203{background-attachment:fixed !important;position:relative !important;padding-top:90.5px !important;padding-left:40px !important;padding-bottom:90.5px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:none !important;left:0 !important;width:100% !important;margin-top:0px !important;margin-bottom:0px !important;padding-right:40px !important;min-width:0 !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody div.u_1280479020{padding-top:2px !important;padding-left:0px !important;padding-bottom:2px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:calc(100% - 129px) !important;left:0 !important;width:715px !important;margin-top:8px !important;position:relative !important;margin-bottom:8px !important;padding-right:0px !important;min-width:25px !important;text-align:left !important;height:auto !important;}
+*#dm *.dmBody div.u_1272627878{padding-top:33px !important;padding-left:40px !important;padding-bottom:33px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:none !important;left:0 !important;width:100% !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:40px !important;min-width:0 !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody h1.u_1587241538{padding-top:2px !important;padding-left:0px !important;padding-bottom:2px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:100% !important;left:0 !important;width:696px !important;margin-top:8px !important;position:relative !important;margin-bottom:8px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:auto !important;display:block !important;}
+*#dm *.dmBody div.u_1924302395{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:0px !important;margin-left:0px !important;top:0px !important;max-width:calc(100% - 0px) !important;left:0px !important;width:100% !important;margin-top:41px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:start !important;height:auto !important;}
+*#dm *.dmBody div.u_1623188399{padding-top:81px !important;padding-left:40px !important;padding-bottom:81px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:none !important;left:0 !important;width:100% !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:40px !important;min-width:0 !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody h2.u_1857157429{padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:calc(100% - 465px) !important;top:auto !important;max-width:100% !important;left:0px !important;width:100% !important;margin-top:19.92px !important;position:relative !important;margin-bottom:19.92px !important;padding-right:0px !important;min-width:0 !important;text-align:right !important;height:auto !important;}
+*#dm *.dmBody div.u_1414067917{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:calc(100% - 33px) !important;top:auto !important;max-width:100% !important;left:0px !important;width:33px !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:auto !important;display:block !important;}
+*#dm *.dmBody a.u_1863833641{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:calc(100% - 0px) !important;left:0 !important;width:282px !important;margin-top:45px !important;position:relative !important;margin-bottom:10px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:48px !important;}
+*#dm *.dmBody a.u_1648317811{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:calc(100% - 0px) !important;left:0 !important;width:282px !important;margin-top:45px !important;position:relative !important;margin-bottom:10px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:48px !important;}
+*#dm *.dmBody h2.u_1700671282{padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:calc(100% - 0px) !important;left:0 !important;width:100% !important;margin-top:25px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody a.u_1015610930{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:2.14063px !important;margin-left:2.125px !important;top:0px !important;max-width:calc(100% - 2px) !important;left:0px !important;width:280px !important;margin-top:21px !important;position:relative !important;margin-bottom:10px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:48px !important;}
+*#dm *.dmBody h2.u_1766100284{padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:calc(100% - 0px) !important;left:0 !important;width:100% !important;margin-top:25px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody img.u_1392040971{width:100% !important;max-height:none !important;max-width:none !important;height:auto !important;}
+*#dm *.dmBody div.u_1306080814{width:213px !important;max-height:1000px !important;height:auto !important;padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:100% !important;left:0 !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;}
+*#dm *.dmBody h2.u_1088152410{padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:calc(100% - 0px) !important;left:0 !important;width:100% !important;margin-top:25px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody a.u_1444773675{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:2.14063px !important;margin-left:2.125px !important;top:0px !important;max-width:calc(100% - 2px) !important;left:0px !important;width:280px !important;margin-top:21px !important;position:relative !important;margin-bottom:10px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:48px !important;}
+*#dm *.dmBody div.u_1478995264{padding-top:2px !important;padding-left:0px !important;padding-bottom:2px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:calc(100% - 0px) !important;left:0 !important;width:100% !important;margin-top:9px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:auto !important;display:block !important;}
+*#dm *.dmBody img.u_1830632720{width:100% !important;max-height:none !important;max-width:none !important;height:auto !important;}
+*#dm *.dmBody div.u_1444573868{width:213px !important;max-height:1000px !important;height:auto !important;padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:100% !important;left:0 !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;}
+*#dm *.dmBody a.u_1369255457{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:2.14063px !important;margin-left:2.125px !important;top:0px !important;max-width:calc(100% - 2px) !important;left:0px !important;width:280px !important;margin-top:21px !important;position:relative !important;margin-bottom:10px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:48px !important;}
+*#dm *.dmBody div.u_1629883029{padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:215px !important;margin-left:215px !important;top:0px !important;max-width:calc(100% - 215px) !important;left:0px !important;width:530px !important;margin-top:-76px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody div.u_1526677634{padding-top:2px !important;padding-left:0px !important;display:block !important;padding-bottom:2px !important;float:none !important;top:auto !important;max-width:100% !important;left:0px !important;width:100% !important;position:relative !important;padding-right:0px !important;min-width:0 !important;text-align:right !important;height:auto !important;margin-right:0 !important;margin-left:0 !important;margin-top:0 !important;margin-bottom:0 !important;}
+*#dm *.dmBody div.u_1015569373{padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;top:auto !important;max-width:100% !important;left:0px !important;width:64px !important;position:relative !important;padding-right:0px !important;min-width:0 !important;text-align:left !important;height:auto !important;margin-right:0 !important;margin-left:0 !important;margin-top:0 !important;margin-bottom:0 !important;}
+*#dm *.dmBody div.u_1877554731{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:100% !important;left:0 !important;width:41px !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:auto !important;display:block !important;}
+*#dm *.dmBody div.u_1340759176{background-attachment:fixed !important;position:relative !important;padding-top:94px !important;padding-left:0px !important;padding-bottom:94px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:none !important;left:0 !important;width:100% !important;margin-top:0px !important;margin-bottom:0px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody a.u_1320576618{padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;top:0px !important;max-width:calc(100% - 340px) !important;left:0px !important;width:280px !important;position:relative !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:48px !important;}
+*#dm *.dmBody a.u_1501310289{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:calc(100% - 0px) !important;left:0 !important;width:285px !important;margin-top:29px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:48px !important;}
+*#dm *.dmBody a.u_1081974776{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:0px !important;margin-left:28px !important;top:0px !important;max-width:calc(100% - 28px) !important;left:0px !important;width:287px !important;margin-top:29px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:48px !important;}
+*#dm *.dmBody img.u_1924514964{width:100% !important;max-height:none !important;max-width:none !important;height:auto !important;}
+*#dm *.dmBody img.u_1934198223{width:100% !important;max-height:none !important;max-width:none !important;height:auto !important;}
+*#dm *.dmBody div.u_1268483053{background-attachment:fixed !important;position:relative !important;padding-top:90px !important;padding-left:40px !important;padding-bottom:90px !important;float:none !important;top:auto !important;max-width:none !important;left:0 !important;width:100% !important;padding-right:40px !important;min-width:0 !important;text-align:center !important;height:auto !important;margin-right:auto !important;margin-left:auto !important;margin-top:0px !important;margin-bottom:0px !important;}
+*#dm *.dmBody div.u_1280057742{padding-top:90px !important;padding-left:40px !important;padding-bottom:90px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:none !important;left:0 !important;width:100% !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:40px !important;min-width:0 !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody div.u_1396380103{padding-top:90px !important;padding-left:40px !important;padding-bottom:90px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:none !important;left:0 !important;width:100% !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:40px !important;min-width:0 !important;text-align:start !important;height:auto !important;}
+*#dm *.dmBody a.u_1558875637{padding-top:0px !important;padding-left:40px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:100% !important;left:0 !important;width:280px !important;margin-top:10px !important;position:relative !important;margin-bottom:10px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:44px !important;}
+*#dm *.dmBody div.u_1759509580{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:100% !important;left:0 !important;width:100% !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:auto !important;display:block !important;}
+*#dm *.dmBody h2.u_1956394339{padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:100% !important;left:0 !important;width:100% !important;margin-top:0px !important;position:relative !important;margin-bottom:19.92px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody div.u_1551416931{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;top:auto !important;max-width:100% !important;left:0 !important;width:100% !important;position:relative !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:auto !important;display:block !important;margin-right:auto !important;margin-left:auto !important;margin-top:0px !important;margin-bottom:0px !important;}
+*#dm *.dmBody div.u_1101659390{padding-top:2px !important;padding-left:0px !important;display:block !important;padding-bottom:2px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:100% !important;left:0 !important;width:100% !important;margin-top:0px !important;position:relative !important;margin-bottom:8px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody a.u_1646395974{padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:100% !important;left:0 !important;width:280px !important;margin-top:21px !important;position:relative !important;margin-bottom:10px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:48px !important;}
+*#dm *.dmBody div.u_1969455780{padding-top:45px !important;padding-left:40px !important;padding-bottom:45px !important;float:none !important;top:auto !important;max-width:none !important;left:0 !important;width:100% !important;position:relative !important;padding-right:40px !important;min-width:0 !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody div.u_1044096577{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;top:0px !important;max-width:100% !important;left:0 !important;width:100% !important;position:relative !important;padding-right:0px !important;min-width:0 !important;text-align:start !important;height:auto !important;display:block !important;}
+*#dm *.dmBody div.u_1050939570{padding-top:70px !important;padding-left:40px !important;padding-bottom:70px !important;float:none !important;top:auto !important;max-width:none !important;left:0 !important;width:100% !important;position:relative !important;padding-right:40px !important;min-width:0 !important;text-align:start !important;height:auto !important;background-position:50% 50% !important;}
+*#dm *.dmBody div.u_1492378427 *.dmforminput input{font-size:15px !important;}
+*#dm *.dmBody div.u_1492378427 input[type="submit"]{font-size:15px !important;}
+*#dm *.dmBody div.u_1492378427{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:calc(100% - 0px) !important;left:0 !important;width:100% !important;margin-top:25px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:start !important;height:auto !important;display:block !important;}
+*#dm *.dmBody div.u_1521074534{float:none !important;top:0px !important;left:0 !important;width:100% !important;position:relative !important;height:auto !important;padding-top:2px !important;padding-left:0px !important;padding-bottom:2px !important;margin-right:auto !important;margin-left:auto !important;max-width:100% !important;margin-top:0 !important;margin-bottom:0 !important;padding-right:0px !important;min-width:0 !important;text-align:left !important;}
+*#dm *.dmBody h1.u_1565705756{padding-top:2px !important;padding-left:0px !important;padding-bottom:2px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:100% !important;left:0 !important;width:696px !important;margin-top:0 !important;position:relative !important;margin-bottom:0 !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;height:auto !important;display:block !important;}
+*#dm *.dmBody div.u_1392099681{padding-top:2px !important;padding-left:0px !important;padding-bottom:2px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:100% !important;left:0 !important;width:715px !important;margin-top:0 !important;position:relative !important;margin-bottom:0 !important;padding-right:0px !important;min-width:0 !important;text-align:left !important;height:auto !important;}
+*#dm *.dmBody div.u_1141467159{padding-top:20px !important;padding-bottom:30px !important;}
+*#dm *.dmBody div.u_1522465388{padding-top:0px !important;padding-bottom:0px !important;}
+*#dm *.dmBody div.u_1522171907{padding-top:2px !important;padding-left:0px !important;display:block !important;padding-bottom:2px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:0px !important;max-width:calc(100% - 132px) !important;left:0 !important;width:696px !important;margin-top:-12px !important;position:relative !important;margin-bottom:26px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:auto !important;}
+*#dm *.dmBody div.u_1758426993{padding-top:70px !important;padding-left:40px !important;padding-bottom:70px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:none !important;left:0 !important;width:100% !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:40px !important;min-width:0 !important;text-align:start !important;height:auto !important;background-position:50% 50% !important;}
+*#dm *.dmBody a.u_1985996269{padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;top:0px !important;max-width:calc(100% - 340px) !important;left:0 !important;width:280px !important;position:relative !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;height:48px !important;margin-right:auto !important;margin-left:auto !important;margin-top:-9px !important;margin-bottom:10px !important;}
+*#dm *.dmBody div.u_1022014213{padding-top:2px !important;padding-left:0px !important;padding-bottom:2px !important;float:none !important;margin-right:auto !important;margin-left:0 !important;top:0px !important;max-width:100% !important;left:0px !important;width:100% !important;margin-top:9px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:0 !important;text-align:left !important;height:auto !important;display:block !important;}
+*#dm *.dmBody div.u_1153786306{padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;float:none !important;margin-right:0px !important;margin-left:63px !important;top:0px !important;max-width:calc(100% - 63px) !important;left:0px !important;width:379px !important;margin-top:9px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:left !important;height:auto !important;display:block !important;}
+*#dm *.dmBody div.u_1647121908{padding-top:70px !important;padding-left:40px !important;padding-bottom:70px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:none !important;left:0 !important;width:100% !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:40px !important;min-width:0 !important;text-align:start !important;height:auto !important;}
+*#dm *.dmBody div.u_1631255990{float:none !important;top:0px !important;left:0 !important;width:100% !important;position:relative !important;height:auto !important;padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;margin-right:auto !important;margin-left:auto !important;max-width:calc(100% - 0px) !important;margin-top:27px !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:left !important;}
+*#dm *.dmBody div.u_1895233626{background-position:50% 50% !important;padding-top:500px !important;padding-bottom:30px !important;}
+*#dm *.dmBody div.u_1117958961{width:100% !important;max-height:1000px !important;padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;top:auto !important;max-width:100% !important;left:0 !important;position:relative !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;margin-right:auto !important;margin-left:auto !important;margin-top:0px !important;margin-bottom:0px !important;}
+*#dm *.dmBody div.u_1330175492{width:100% !important;max-height:1000px !important;padding-top:0px !important;padding-left:0px !important;display:block !important;padding-bottom:0px !important;float:none !important;margin-right:auto !important;margin-left:auto !important;top:auto !important;max-width:100% !important;left:0 !important;margin-top:0px !important;position:relative !important;margin-bottom:0px !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;}
+*#dm *.dmBody a.u_1219806995{float:none !important;top:0px !important;left:0 !important;width:100% !important;position:relative !important;height:40px !important;padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;max-width:100% !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;}
+*#dm *.dmBody a.u_1464040055{float:none !important;top:0px !important;left:0 !important;width:100% !important;position:relative !important;height:40px !important;padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;margin-right:auto !important;margin-left:auto !important;max-width:calc(100% - 0px) !important;margin-top:10px !important;margin-bottom:0px !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;}
+*#dm *.dmBody a.u_1583999437{float:none !important;top:0px !important;left:0 !important;width:100% !important;position:relative !important;height:40px !important;padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;margin-right:auto !important;margin-left:auto !important;max-width:100% !important;margin-top:0 !important;margin-bottom:0 !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;}
+*#dm *.dmBody a.u_1895273716{float:none !important;top:0px !important;left:0 !important;width:100% !important;position:relative !important;height:40px !important;padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;max-width:calc(100% - 0px) !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;margin-right:auto !important;margin-left:auto !important;margin-top:10px !important;margin-bottom:0px !important;}
+*#dm *.dmBody a.u_1219170297{float:none !important;top:0px !important;left:0 !important;width:100% !important;position:relative !important;height:40px !important;padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;max-width:calc(100% - 0px) !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;margin-right:auto !important;margin-left:auto !important;margin-top:10px !important;margin-bottom:0px !important;}
+*#dm *.dmBody a.u_1406025956{float:none !important;top:0px !important;left:0 !important;width:100% !important;position:relative !important;height:40px !important;padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;max-width:calc(100% - 0px) !important;padding-right:0px !important;min-width:25px !important;text-align:center !important;margin-right:auto !important;margin-left:auto !important;margin-top:10px !important;margin-bottom:0px !important;}
+*#dm *.dmBody a.u_1373657374{float:none !important;top:0px !important;left:0 !important;width:306px !important;position:relative !important;height:40px !important;padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;max-width:100% !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;margin-right:auto !important;margin-left:auto !important;margin-top:0px !important;margin-bottom:0px !important;display:block !important;}
+*#dm *.dmBody a.u_1547381682{float:none !important;top:0px !important;left:0 !important;width:306px !important;position:relative !important;height:40px !important;padding-top:0px !important;padding-left:0px !important;padding-bottom:0px !important;max-width:100% !important;padding-right:0px !important;min-width:0 !important;text-align:center !important;margin-right:auto !important;margin-left:auto !important;margin-top:0 !important;margin-bottom:0 !important;}
+*#dm *.dmBody div.u_1803145201{padding-bottom:70px !important;}
+
+</style>
+
+<!-- Flex Sections CSS -->
+
+
+
+
+
+    <style id="globalFontSizeStyle" type="text/css">
+        .font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-22, .size-22, .size-22 > font { font-size: 22px !important; }.font-size-36, .size-36, .size-36 > font { font-size: 36px !important; }.font-size-22, .size-22, .size-22 > font { font-size: 22px !important; }.font-size-36, .size-36, .size-36 > font { font-size: 36px !important; }.font-size-22, .size-22, .size-22 > font { font-size: 22px !important; }
+    </style>
+    <style id="pageFontSizeStyle" type="text/css">
+    </style>
+
+
+
+
+<style id="hideAnimFix">
+  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+    visibility: hidden;
+  }
+  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+    visibility: hidden !important;
+  }
+</style>
+
+
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+<meta property="og:type" content="website">
+
+  <title>
+    Experienced hairdressers in London
+  </title>
+  <meta name="keywords" content="Heena Beauty, London, hairdresser">
+  <meta name="description" content="Heena Beauty has a team of skilled hairdressers in London. Call us on 020 8881 5939 for various types of beauty treatments at great prices.">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Experienced hairdressers in London">
+  <meta name="twitter:description" content="Heena Beauty has a team of skilled hairdressers in London. Call us on 020 8881 5939 for various types of beauty treatments at great prices.">
+  <meta property="og:description" content="Heena Beauty has a team of skilled hairdressers in London. Call us on 020 8881 5939 for various types of beauty treatments at great prices.">
+  <meta property="og:title" content="Experienced hairdressers in London">
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="hair-and-beauty-treatments" class="supportsFontIcons supportsFontIcons dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody " style="padding:0;margin:0;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class='dmwr'>
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-sec hasAnimations hasStickyHeader dmPageBody d-page-1716942098 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-buttonstyle="THICK_BORDER_ROUND" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="dmHeader p_hfcontainer" freeheader="true"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1326075203 dmRespRow" style="text-align: center;" id="1326075203"> <div class="dmRespColsWrapper" id="1638289357"> <div class="u_1128697253 dmRespCol small-12 large-3 medium-3" id="1128697253"> <div class="u_1513500540 dmNewParagraph" id="1513500540" style="transition: opacity 1s ease-in-out;"><a href="mailto:heena_beauty@hotmail.co.uk" runtime_url="mailto:heena_beauty@hotmail.co.uk" class="font-size-14 lh-1"><span><span><font style="color: rgb(255, 255, 255);"><span style="font-weight: 400;">heena_beauty@hotmail.co.uk</span></font></span></span></a></div></div> 
+ <div class="u_1708237699 dmRespCol small-12 large-6 medium-6" id="1708237699"> <span id="1754593479"></span> 
+ <div class="u_1824476841 imageWidget align-center" data-widget-type="image" id="1824476841"> <a href="index.htm" id="1854647324" file="false"><img src="09d02fe2/dms3rep/multi/opt/Heena%20Beauty_logo-480w.png" id="1095337825" class="" data-dm-image-path="https://irp-cdn.multiscreensite.com/09d02fe2/dms3rep/multi/Heena+Beauty_logo.png" alt="heena beauty" onerror="handleImageLoadError(this)"></a> 
+</div> 
+</div> 
+ <div class="u_1413008893 dmRespCol small-12 large-3 medium-3" id="1413008893"> <div class="u_1315832135 dmNewParagraph" id="1315832135" style="display: block;"><div style="text-align: right;"><span class="font-size-22 lh-1"><b><font style="color: rgb(255, 255, 255);">020 8881 5939</font></b></span></div></div></div> 
+</div> 
+</div> 
+ <div class="u_1568566567 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1568566567"> <div class="dmRespColsWrapper" id="1064205073"> <div class="dmRespCol small-12 medium-12 large-12" id="1113707237"> <span id="1565971041"></span> 
+ <div class="u_1440520738 default dmLinksMenu desktopNavWrapper" id="1440520738" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" wr="true" icon="true" surround="true" adwords=""> <ul class="dmNavWrapper dmn menuContainer "> <li class=" desktopTopNav navListLi navButtonLi   "> <a href="index.htm" class="dmUDNavigationItem_00 " target="" data-target-page-alias=""> <span class="navItemText ">Home</span> 
+</a> 
+</li> 
+ <li class=" desktopTopNav navListLi navButtonLi   hasdmSub   navItemSelectedServer "> <a href="hair-and-beauty-treatments.html" class="dmUDNavigationItem_010101107275 " target="" data-target-page-alias=""> <span class="navItemText ">Hair &amp; Beauty Treatments</span> 
+</a> 
+ <ul class="dmNavigationStyle_1 dmNavigation dmn innerUl "> <li class=" dmSub navListLi navButtonLi   "> <a href="wood-green-salons.html" class="dmUDNavigationItem_010101870186 " target="" data-target-page-alias=""> <span class="navItemText ">Wood Green  Salons</span> 
+</a> 
+</li> 
+ <li class=" dmSub navListLi navButtonLi   "> <a href="goodge-street-salon.html" class="dmUDNavigationItem_010101142881 " target="" data-target-page-alias=""> <span class="navItemText ">Goodge Street Salon</span> 
+</a> 
+</li> 
+ <li class=" dmSub navListLi navButtonLi   "> <a href="willesden-green-salon.html" class="dmUDNavigationItem_010101862381 " target="" data-target-page-alias=""> <span class="navItemText ">Willesden Green Salon</span> 
+</a> 
+</li> 
+ <li class=" dmSub navListLi navButtonLi   "> <a href="stamford-hill-salon.html" class="dmUDNavigationItem_010101688939 " target="" data-target-page-alias=""> <span class="navItemText ">Stamford Hill Salon</span> 
+</a> 
+</li> 
+ <li class=" dmSub navListLi navButtonLi   "> <a href="stratford-salon.html" class="dmUDNavigationItem_010101817858 " target="" data-target-page-alias=""> <span class="navItemText ">Stratford Salon</span> 
+</a> 
+</li> 
+ <li class=" dmSub navListLi navButtonLi   "> <a href="holloway-salon.html" class="dmUDNavigationItem_010101522206 " target="" data-target-page-alias=""> <span class="navItemText ">Holloway Salon</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li class=" desktopTopNav navListLi navButtonLi   "> <a href="contact.html" class="dmUDNavigationItem_010101303683 " target="" data-target-page-alias=""> <span class="navItemText ">Contact</span> 
+</a> 
+</li> 
+</ul> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div> 
+ <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr></div> 
+<!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"> <div class="innerPageTitle">Hair &amp; Beauty Treatments</div> 
+</div> 
+ <div class="titleLine display_None"><hr></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="1901957768" class="dmBody u_dmStyle_template_hair-and-beauty-treatments dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div class="dmRespRow u_1895233626" style="text-align: center;" id="1895233626"> <div class="dmRespColsWrapper" id="1183108912"> <div class="dmRespCol small-12 medium-12 large-12 u_1141467159" id="1141467159"> <span id="1166202502"></span> 
+ <h1 class="u_1565705756 dmNewParagraph GINGER_SOFTWARE_control" id="1565705756" spellcheck="false" ginger_software_editor="true" style="display: block;"><div style="text-align: center;"><font>Experienced hairdressers in London</font></div></h1> <div class="u_1392099681 dmNewParagraph GINGER_SOFTWARE_control" id="1392099681" style="display: block;" spellcheck="false" ginger_software_editor="true"><div style="text-align: center;"><font>For stunning hairdressing and haircuts, visit <gs id="2ac6009c-0316-4cc9-ad19-26d1622213ae" ginger_software_uiphraseguid="6e17db53-187e-4f58-9f7f-dedb2c327e69" class="GINGER_SOFTWARE_mark">Heena</gs> 
+Beauty if you are in London. Our professional hairdressers will offer you bespoke hairstyles to suit your personality.&nbsp;</font></div></div></div> 
+</div> 
+</div> 
+ <div class="u_1758426993 dmRespRow dmReadySection fullTxtBtnTmpl" dm:templateid="FullTextButton" id="1758426993"> <div class="dmRespColsWrapper fullTxtBtnSection" id="1809278372"> <div class="u_1522465388 dmRespCol small-12 medium-12 large-12" id="1522465388"> <h2 id="1956394339" class="u_1956394339 GINGER_SOFTWARE_control" style="display: block;" spellcheck="false" ginger_software_editor="true"><span class="font-size-36 lh-1"><font style="color: rgb(255, 255, 255);">A wide range of beauty treatments&nbsp;</font></span></h2> <div class="u_1522171907 dmNewParagraph sectionParagraph GINGER_SOFTWARE_control" id="1522171907" style="display: block;" spellcheck="false" ginger_software_editor="true"><font style="color: rgb(255, 255, 255);">Whether you need threading, tinting or waxing, Heena Beauty is the salon you should consider. We are well-equipped to offer various types of salon services at great prices. Contact us for details.&nbsp;</font></div> <a data-display-type="block" class="u_1985996269 dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" id="1985996269"> <span class="iconBg" id="1564484736"> <span class="icon hasFontIcon icon-star" id="1397966892"></span> 
+</span> 
+ <span class="text" id="1590210107">Contact</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1647121908 dmRespRow dmReadySection" dm:templateid="ImageAndButton" id="1647121908"> <div class="dmRespColsWrapper ImageAndButtonSection" id="1918702920"> <div class="dmRespCol small-12 medium-6 large-6" id="1310999765"> <div class="u_1330175492 imageWidget" id="1330175492"><img src="09d02fe2/dms3rep/multi/opt/Hair_pod11-480w.jpg" id="1924514964" dm_changed="true" class="u_1924514964" data-dm-image-path="https://irp-cdn.multiscreensite.com/09d02fe2/dms3rep/multi/Hair_pod11.jpg" alt="eyes" onerror="handleImageLoadError(this)"></div> 
+ <h2 id="1700671282" class="u_1700671282 GINGER_SOFTWARE_control" style="" spellcheck="false" ginger_software_editor="true"><div style="text-align: center;">Quality threading  and tinting&nbsp;</div></h2> <div class="u_1022014213 dmNewParagraph GINGER_SOFTWARE_control" id="1022014213" spellcheck="false" ginger_software_editor="true">Threading has become the preferred technique of hair removal for many people. It catches even the finest of hairs leaving you with clean lines and smooth skin. We undergo continuous training to keep up to date with the latest techniques and offer you the very best beauty treatments which include eyebrow tinting and eyelash tinting.&nbsp;<div><b><span style="font-weight: 700;"><br></span></b></div><div><b><span style="font-weight: 700;">We offer threading on:&nbsp;</span></b></div><div><ul class="innerList defaultList"><li>Eyebrow<br></li><li>Upper and lower lip<br></li><li>Chin<br></li><li>Side<br></li><li>Neck&nbsp;<br></li><li>Forehead&nbsp;<br></li><li>Full face&nbsp;<br></li><li>Men&rsquo;s eyebrows&nbsp;</li></ul></div></div></div> 
+ <div class="dmRespCol small-12 medium-6 large-6" id="1819684655"> <div class="u_1117958961 imageWidget" id="1117958961"><img src="09d02fe2/dms3rep/multi/opt/Hair_pod2-480w.jpg" id="1934198223" dm_changed="true" class="u_1934198223" data-dm-image-path="https://irp-cdn.multiscreensite.com/09d02fe2/dms3rep/multi/Hair_pod2.jpg" alt="waxing" onerror="handleImageLoadError(this)"></div> 
+ <h2 id="1766100284" class="u_1766100284 GINGER_SOFTWARE_control" style="" spellcheck="false" ginger_software_editor="true"><div style="text-align: center;">Our waxing services cover:</div></h2> <div class="u_1153786306 dmNewParagraph GINGER_SOFTWARE_control" id="1153786306" style="display: block;" spellcheck="false" ginger_software_editor="true"><ul class="innerList defaultList"><li>Full and half arm waxing<br></li><li>Full and half leg waxing&nbsp;<br></li><li>Side and chin wax<br></li><li>Neck wax and <gs id="479a4b66-3ea3-4b70-adac-4e59cb59f567" ginger_software_uiphraseguid="73a06457-35e9-435b-b308-c238504367d9" class="GINGER_SOFTWARE_mark" style="background-color: transparent;">under arm</gs> <span style="background-color: transparent; line-height: normal;">wax</span><br></li><li>Full face and full body wax<br></li><li>Full front, half front, full back and half back<br></li><li>Full bikini, Brazilian and bikini line waxing&nbsp;</li></ul></div></div> 
+</div> 
+</div> 
+ <div class="dmRespRow" style="text-align: center;" id="1985833217"> <div class="dmRespColsWrapper" id="1988397538"> <div class="dmRespCol small-12 medium-3 large-3" id="1448206451"> <span id="1802716064"></span> 
+ <a data-display-type="block" class="u_1464040055 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" id="1464040055"> <span class="iconBg" id="1011537313"> <span class="icon hasFontIcon icon-star" id="1650108412"></span> 
+</span> 
+ <span class="text" id="1350898009">Contact us</span> 
+</a> 
+</div> 
+ <div class="dmRespCol small-12 medium-3 large-3" id="1008432175"> <span id="1505211839"></span> 
+ <a data-display-type="block" class="u_1895273716 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" id="1895273716"> <span class="iconBg" id="1734327142"> <span class="icon hasFontIcon icon-star" id="1036950439"></span> 
+</span> 
+ <span class="text" id="1642996894">Wood Green</span> 
+</a> 
+</div> 
+ <div class="dmRespCol small-12 medium-3 large-3" id="1447032665"> <a data-display-type="block" class="u_1219170297 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" id="1219170297"> <span class="iconBg" id="1673494562"> <span class="icon hasFontIcon icon-star" id="1147575904"></span> 
+</span> 
+ <span class="text" id="1874038127">Goodge Street</span> 
+</a> 
+</div> 
+ <div class="dmRespCol small-12 medium-3 large-3" id="1017345310"> <a data-display-type="block" class="u_1406025956 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" id="1406025956"> <span class="iconBg" id="1188697972"> <span class="icon hasFontIcon icon-star" id="1534575276"></span> 
+</span> 
+ <span class="text" id="1056713087">Willesden Green</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1803145201" style="text-align: center;" id="1803145201"> <div class="dmRespColsWrapper" id="1515320357"> <div class="dmRespCol small-12 medium-4 large-4" id="1236299327"> <span id="1645175693"></span> 
+ <a data-display-type="block" class="u_1547381682 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" id="1547381682"> <span class="iconBg" id="1114378614"> <span class="icon hasFontIcon icon-star" id="1956909710"></span> 
+</span> 
+ <span class="text" id="1904951763">Stamford Hill</span> 
+</a> 
+</div> 
+ <div class="dmRespCol small-12 medium-4 large-4" id="1417220501"> <span id="1536941333"></span> 
+ <a data-display-type="block" class="u_1373657374 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" id="1373657374"> <span class="iconBg" id="1180471015"> <span class="icon hasFontIcon icon-star" id="1520318924"></span> 
+</span> 
+ <span class="text" id="1317777864">Stratford</span> 
+</a> 
+</div> 
+ <div class="dmRespCol small-12 medium-4 large-4" id="1588825093"> <span id="1947711823"></span> 
+ <a data-display-type="block" class="u_1583999437 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" id="1583999437"> <span class="iconBg" id="1877373891"> <span class="icon hasFontIcon icon-star" id="1109225801"></span> 
+</span> 
+ <span class="text" id="1649410558">Holloway</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1050939570 dmRespRow dmReadySection" dm:templateid="ContactUs" id="1050939570"> <div class="dmRespColsWrapper ContactUsSection" id="1558993182"> <div class="u_1001874000 dmRespCol small-12 medium-12 large-12" id="1001874000"> <div class="u_1521074534 dmNewParagraph GINGER_SOFTWARE_control" id="1521074534" style="display: block;" spellcheck="false" ginger_software_editor="true"><div style="text-align: center;"><b style="color: rgb(247, 247, 247);"><span style="font-weight: 400; font-family: 'Lobster Two';" class="font-size-22 lh-1">Call our hairdressers on&nbsp;</span></b></div><div style="text-align: center;"><b style="color: rgb(247, 247, 247);"><span style="font-family: 'Lobster Two'; font-weight: 700;" class="lh-1 font-size-36">020 8881 5939</span></b></div><div style="text-align: center;"><b style="color: rgb(247, 247, 247);"><span style="font-weight: 400; font-family: 'Lobster Two';" class="font-size-22 lh-1">for details about our salon services and their prices at&nbsp;our branches in London.&nbsp;</span></b><br></div></div> <div class="u_1631255990 dmDividerWrapper clearfix" id="1631255990"><hr class="u_1840422254 dmDivider defaultDivider" id="1840422254"></div> 
+ <div class="u_1492378427 dmform default dmContactDefaultForm" id="1492378427"> <h3 class="dmform-title dmwidget-title" id="1528869376">Get in touch</h3> 
+ <div class="dmform-wrapper" id="1048043066" captcha-lang="en"> <form method="post" class="dmRespDesignRow" locale="UK" id="1937335470"> <div class="dmforminput required small-12 medium-4 large-4 dmRespDesignCol" id="1244812334"> <label for="1755617953" id="1268758682" data-dm-for="dmform-0">Name:</label> 
+<input type="text" name="dmform-0" id="1755617953"><input type="hidden" name="label-dmform-0" value="Name" id="1453009073"></div> 
+ <div class="dmforminput required small-12 medium-4 large-4 dmRespDesignCol" id="1832689730"> <label for="1871537828" id="1760814748" data-dm-for="dmform-1">Email:</label> 
+<input type="email" name="dmform-1" id="1871537828"><input type="hidden" name="label-dmform-1" value="Email" id="1601433587"></div> 
+ <div class="dmforminput required small-12 medium-4 large-4 dmRespDesignCol" id="1652182062"> <label for="1019065381" id="1002002247" data-dm-for="dmform-2">Phone:</label> 
+<input type="tel" name="dmform-2" id="1019065381"><input type="hidden" name="label-dmform-2" value="Phone" id="1345131597"></div> 
+ <div class="dmforminput large-12 medium-12 dmRespDesignCol" id="1427659358"> <label for="1682192811" id="1797482666" data-dm-for="dmform-3">Message:</label> 
+ <textarea name="dmform-3" id="1682192811"></textarea> 
+<input type="hidden" name="label-dmform-3" value="Message" id="1998156469"></div> 
+ <div class="dmformsubmit dmWidget R" id="1088128747"><input class="" name="submit" type="submit" value="Send" id="1738301607"></div> 
+<input name="dmformsendto" type="hidden" value="O0wrseIfFLsCQmdTuSJB4lWymd7S7pf756WjNX9igUtenJvOKFwsZ/2HGz6vfqBkSz3tEJrS6T2VgsyPiccSeQ==" id="1295435251" class="" data-dec="true"><input class="dmActionInput" type="hidden" name="action" value="/_dm/s/rt/widgets/dmform.submit.jsp" id="1926239086"><input name="dmformsubject" type="hidden" value="Yell Website Form Enquiry" id="1273360289" class=""></form> 
+</div> 
+ <div class="dmform-success" style="display:none" id="1697855411">Thank you for contacting us.<br id="1358168887">We will get back to you as soon as possible</div> 
+ <div class="dmform-error" style="display:none" id="1906227768">Oops, there was an error sending your message.<br id="1000597784">Please try again later</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="14" class="dmFooterResp dmFullFooterResp" id="1335256076"> <div class="dmRespRow u_1125948759" style="text-align: center;" id="1125948759"> <div class="dmRespColsWrapper" id="1872744123"> <div class="dmRespCol small-12 medium-12 large-12" id="1850952227"> <span id="1545170738"></span> 
+ <div class="u_1913650889 default dmDefaultGradient dmShare dmNoMark dmShareDesktop clearfix" id="1913650889" dmle_extension="shareextension" data-element-type="shareextension" google_plus="true" wr="true" data-display-type="block" icon="true" surround="true" icon-name="icon-share" facebook="true" twitter="true" email="true" like="true" use_new_design="true" use_popup="true" linked_in="true" data-title="VGVpbGVu" data-display-title="false" data-layout="layout-3" data-share-hover-effect="zoomout" text="I wanted to share this great website with you" design="large" share_button_text="Share" share_popup_title="Share by:"> <div data-target="facebook" class="shareLink fbShare clickTarget" data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.heenabeauty.co.uk"> <span class="icon-facebook shareText">Share</span> 
+</div> 
+ <div data-target="twitter" class="shareLink twitterShare clickTarget" data-href="http://twitter.com/intent/tweet?text=I wanted to share this great website with you&url=https%3A%2F%2Fwww.heenabeauty.co.uk"> <span class="icon-twitter shareText">Tweet</span> 
+</div> 
+ <div data-target="linkedin" class="shareLink linkedinShare clickTarget" data-href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.heenabeauty.co.uk&title=I wanted to share this great website with you"> <span class="icon-linkedin shareText">Share</span> 
+</div> 
+ <div data-target="email" class="shareLink emailShare clickTarget" data-href="/_dm/s/rt/actions/emailshare?text=I wanted to share this great website with you&site=https%3A%2F%2Fwww.heenabeauty.co.uk&lang=us&class=insidePopUp"> <span class="icon-envelope shareText">Mail</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1186764863 dmRespRow dmFooterContent" id="1186764863"> <div class="dmRespColsWrapper" id="1981648514"> <div class="dmRespCol small-12 medium-12 large-12" id="1821162563"> <span id="1909056013"></span> 
+ <div class="u_1303427556 imageWidget" data-widget-type="image" id="1303427556"> <a href="https://www.yell.com/biz/heena-beauty-london-8801040/" id="1948371767" file="false" target="_blank"><img src="09d02fe2/dms3rep/multi/opt/RS768871_Yell%20Review%20Us%20On%20Logo%20RGB%20Transparent%20White%20Text-300x151-960w.png" id="1368494129" dm_changed="true" class="u_1368494129" alt="yell logo" onerror="handleImageLoadError(this)"></a> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="1478749860" class="poweredBy" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"> <div class="poweredLine1"> <a href="https://business.yell.com/legal/terms-of-use/" rel="nofollow" target="_blank">Terms of Use</a> 
+&nbsp;|&nbsp; <a href="https://business.yell.com/websites-privacy-cookie-policy/" rel="nofollow" target="_blank">Privacy &amp; Cookie Policy</a> 
+&nbsp;|&nbsp; <a href="https://business.yell.com/legal/trading-terms/" rel="nofollow" target="_blank">Trading Terms</a> 
+&nbsp;|&nbsp;Powered by <a href="https://business.yell.com/websites/" target="_blank" rel="nofollow">Yell Business</a> 
+</div> 
+ <div class="poweredLine2">&copy; 2023. The content on this website is owned by us and our licensors. Do not copy any content (including images) without our consent.</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+<!-- ========= JS Section ========= -->
+
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+    window.isSitePreview = false;
+</script>
+<script type="text/javascript">
+
+    var d_version = "19..71";
+    var build = "2023-01-18T13_52_12";
+    window['v'+'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2023-01-18T13_52_12";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            }
+            else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+
+
+</script>
+<!-- Load jQuery -->
+<script type="text/javascript" src="libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- End Load jQuery -->
+
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    window.cookiesNotificationMarkupPreview = ' <div>We use cookies to ensure that we give you the best experience on our website. If you would like to change your preferences you may do so by following the instructions <a href=\"http:\/\/www.aboutcookies.org\/Default.aspx?page=1\" target=\"_blank\">here<\/a>.<\/div> \n';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["facebook.accessToken"] = '126515034112906|8vv7JhnEegS8qz43fIOZjxGZReA';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["feature.flag.contactUsNewForm"] = 'true';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["google.places.key"] = 'AIzaSyBAwUOqPUB1CU31yDztoZYaUE7sPv4ktEI';
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.opencage.token"] = '319e14f32bcce967ba55cd263478796d';
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"]=true;
+    rtCommonProps["common.build.dist.folder"]='production/3152';
+    rtCommonProps["common.resources.cdn.host"]='https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"]='https://static.cdn-website.com/mnlt/production/3152';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"]=true;
+    rtCommonProps["feature.flag.runtime.photoswipe.fix"]=true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"]=true;
+    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"]=true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"]=true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"]=true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"]=true;
+    rtCommonProps["feature.flag.addTargetBlankToExternalLinks"]=true;
+    rtCommonProps["unsuspendEcwidStoreOnRuntime.enabled"]=true;
+    rtCommonProps["keyboard.navigation.enabled"]=true;
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'here';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["ecom.ecwid.categoryPage.modifyLinks"] = true;
+    rtCommonProps["facebook.api.version"] = '7.0';
+    rtCommonProps["runtime.save.restore.function.bind"] =true;
+    rtCommonProps["feature.flag.photo.gallery.exact.size"] =false;
+    rtCommonProps["new.store.fix.ecwid.back.bug"] =true;
+    rtCommonProps["new.store.accountPage.ecwid.signIn.fix"] =true;
+    rtCommonProps["fix.ecwid.sign.in.page.with.return.url"] =true;
+    rtCommonProps["site.runtime.video.background.ssr"] =true;
+    rtCommonProps["geocode.search.localize"] =false; 
+    rtCommonProps["facebook.runtime.widgets.upgrade"] =true;
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtCommonProps["feature.flag.performance.logs"]=true;
+    rtCommonProps["site.contact.form.fix.for.attribute"]=true;
+    rtCommonProps["site.widget.form.captcha.type"]='g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    
+</script>
+<script src="mnlt/production/3152/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js"></script>
+<!-- End of HEAD RT JS Include -->
+<script>jQuery.DM.updateWidthAndHeight();
+$(window).resize(function () {
+    
+});
+$(window).bind("orientationchange", function (e) {
+    $.layoutManager.initLayout();
+    
+});
+$(document).resize(function () {
+    
+});
+</script>
+
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+ 	var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+
+ 	if (campaign && campaign != null && campaign.length > 1) {
+ 		campaign = campaign[1];
+ 		document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24*60*60*1000 + ";domain=" + window.location.hostname + ";path=/";
+ 	}
+}());
+</script>
+<script type="text/javascript">
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+  
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: '09d02fe2'
+});
+
+dmsnowplow('trackPageView')
+$.each(_dm_insite, function(idx, rule) {
+	//('trackStructEvent', 'category','action','label','property','value');
+			// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+	        // the tracking is in popup.js
+			if (rule.actionName !== "popup") {
+                dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+            }
+ 			$(document).ready(function(){
+ 				$.DM.events.trigger('event-ruleTriggered', {value: rule})}
+ 			);
+ 		});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root" data-locale="en"></div>
+<!-- Alias: 09d02fe2 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+// Collects client data and updates cookies used by smart sites
+var expireDays = 365,visitLength = 30 * 60000;
+$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), expireDays);
+function setSmartSiteCookies() {
+	setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+}
+$.DM.events.on("afterAjax", setSmartSiteCookies);
+setSmartSiteCookies();
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+
+<script>
+
+    jQuery(window).on('load', function () {
+        try {
+            jQuery.DM.updateIOSHeight();
+        } catch (e) {
+        }
+
+    });
+</script>
+<script>
+    dmAPI.loadScript(
+        window.rtCommonProps['common.resources.cdn.host'] + '/libs/lozad/1.15.0/lozad.min.js',
+        function () {
+            dmAPI.runOnReady('lozadInit', function () {
+                window.document.querySelectorAll('img.lazy').forEach(function (img) {
+                    img.addEventListener('load', function (event) {
+                        var img = event.target;
+                        img.style.filter = 'blur(0)';
+                        setTimeout(function () {
+                            $(img).closest('.imageWidget').addClass('lazyLoaded');
+                        }, 250)
+                    });
+                });
+                lozad('.lazy', {
+                    threshold: 0.1,
+                    loaded: function (element) {
+                        if (element.getAttribute('data-background-image')) {
+                            element.style.setProperty(
+                                'background-image',
+                                "url('" + element.getAttribute('data-background-image') + "')",
+                                "important"
+                            );
+                        }
+                    }
+                }).observe();
+            });
+        }
+    );
+</script>
+<!--  End Script tags -->
+
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+<!--  Begin Product Custom HTML Markup -->
+<style>
+.menuContainer .currentPage::before {
+  position: absolute;
+}
+</style><!--  End Product Custom HTML Markup -->
+</body>
+</html>
